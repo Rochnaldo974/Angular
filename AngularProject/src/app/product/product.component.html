@@ -1,0 +1,10 @@
+<p>product works!</p>
+<app-product-displayer [products]= "products"></app-product-displayer>
+
+<div>
+     <li *ngFor="let product of products; index as i; first as isFirst">
+        <div *ngIf="product.stock > 0">
+            {{product.name}}: {{product.price}}$. Stock restant: {{product.stock}}
+        </div>
+    </li>
+</div>
